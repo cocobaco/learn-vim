@@ -1,0 +1,77 @@
+vi/vim reference
+roppon picha
+started: dec-02
+updated: jan-09
+-----------------
+
+modes:
+
+press ESC to switch to command mode 
+press v for visual mode (allow highlighting to copy, delete)
+
+most important commands:
+
+//quitting:
+:q - quit
+:q! - force quit (w/o saving)
+:w - write (save)
+:x - save current file and quit (skip saving if file is unmodified)
+
+//navigating:
+slowly:
+h - move left; j - move up; k - move up; l - move right
+w - move forward one word
+b - move backword one word
+quickly:
+{, } - move up, down to next blank line
+(, ) - move backward, forward a sentence
+rapidly:
+^f - forward a page		
+^b - back a page		
+^u - scroll up
+^d - scroll down
+23G - go to line 23
+
+//viewing:
+^y - expose 1 more line at the top
+^e - expose 1 more line at the bottom
+^g - show status
+^l - redraw screen
+
+//editing:
+/ - search (forward)
+? - search (backward)
+i - insert at cursor
+I - insert at start of line
+a - append next to cursor
+A - append at end of line
+s - substitute character
+cw - change word
+cc - change a line
+o - insert line under cursor
+O - insert line above cursor
+x - delete a character
+dw - delete a word
+dd - delete a line 
+dfa - delete until character 'a' (including 'a')
+dFa - delete backward until character 'a' (including 'a')
+dta - delete until character 'a' (excluding 'a')
+dTa - delete backward until character 'a' (excluding 'a')
+	(d4w - delete 4 words)
+	(d4b - delete 4 words backward)
+	(5dd - delete 5 lines)
+	(d3L - delete through the 3rd line from bottom)
+y - yank (copy)
+	(4yy - yank 4 lines)
+p - put back (paste)
+s - substitute (replace text)
+	(:%s/Red/Pink/g - substitute word "Red" with word "Pink"
+			- % means do this on every line
+			- g means do this for every word in each line)
+	(:13,20s/Red/Pink/g - only sub in lines 13 through 20)
+
+//misc:
+u - undo
+^R - redo
+
+(note: ^ = control (Ctrl) key)
